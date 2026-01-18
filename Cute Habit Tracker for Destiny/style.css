@@ -1,0 +1,128 @@
+:root{
+    --card:#ffffff;
+    --text:#333;
+    --pink:#ff85b3;
+}
+
+*{
+    box-sizing:border-box;
+    font-family:Poppins, Comic Sans MS, cursive;
+}
+
+body{
+    background-image: url(images/@nekomimiyu\ ·\ ♡\ mii\ ♡\ 1646.gif);
+    display:flex;
+    justify-content:center;
+    padding:15px;
+    margin:0;
+}
+
+.app{
+    background:var(--card);
+    color:var(--text);
+    width:100%;
+    max-width:500px; /* a bit wider for desktop */
+    padding:20px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    text-align:center;
+}
+
+/* Headers and mascot */
+.mascot{font-size:48px;}
+h1{font-size:1.6rem;}
+h3{font-size:1.2rem;}
+
+/* Progress bar */
+.progress-box{
+    background:#eee;
+    height:14px;
+    border-radius:20px;
+    overflow:hidden;
+}
+#progressBar{
+    height:100%;
+    background:var(--pink);
+    width:0%;
+}
+
+/* Input & buttons */
+.add-box, .backup-box{
+    display:flex;
+    gap:5px;
+    margin:10px 0;
+    flex-wrap:wrap; /* wrap on smaller screens */
+}
+
+input,select,button{
+    padding:8px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    flex:1 1 100px; /* flexible width */
+}
+
+button{
+    background:var(--pink);
+    color:white;
+    border:none;
+}
+
+/* Habit list */
+ul{padding:0; list-style:none;}
+li{
+    background:#ffe6f2;
+    padding:10px;
+    border-radius:12px;
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:6px;
+    flex-wrap:wrap;
+}
+li.done{opacity:.5;text-decoration:line-through;}
+
+/* Calendar */
+#calendar{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:5px;
+    margin:10px 0;
+}
+
+.day{
+    background:#fff0f7;
+    padding:6px;
+    border-radius:8px;
+    font-size:12px;
+    text-align:center;
+}
+
+.day.good{
+    background:#ffb3d9;
+}
+
+/* Chart canvas */
+canvas{
+    width:100% !important;
+    height:120px !important;
+}
+
+/* Media queries for desktop */
+@media(min-width: 768px){
+    .add-box, .backup-box{
+        flex-wrap:nowrap;
+    }
+    input{
+        flex:2 1 200px;
+    }
+    select{
+        flex:1 1 120px;
+    }
+    button{
+        flex:0 1 80px;
+    }
+    li{
+        flex-wrap:nowrap;
+    }
+    h1{font-size:2rem;}
+    .mascot{font-size:64px;}
+}

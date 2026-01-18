@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destiny's Little Habit Garden 🌸</title>
+<link rel="icon" type="image/x-icon" href="images/cute-icon-png-32294.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+    <h1>🌸 Destiny's Little Habit Garden</h1>
+
+    <p id="streak">🔥 Streak: 0 days</p>
+    <p id="reward">🎁 Reward: None yet</p>
+
+    <div class="mascot" id="mascot">🐱</div>
+
+    <div class="progress-box"><div id="progressBar"></div></div>
+    <p id="progressText">0% completed</p>
+
+    <div class="add-box">
+        <input id="habitInput" placeholder="Add a new cute habit...">
+        <select id="category">
+            <option>Study</option>
+            <option>Health</option>
+            <option>Personal</option>
+            <option>Fitness</option>
+        </select>
+        <button id="addBtn">Add 💖</button>
+    </div>
+
+    <div class="backup-box">
+        <button id="backupBtn">⬇ Backup</button>
+        <input type="file" id="restoreInput" hidden>
+        <button id="restoreBtn">⬆ Restore</button>
+    </div>
+
+    <h3>🌸 Monthly Calendar</h3>
+    <div id="calendar"></div>
+
+    <canvas id="chart" height="120"></canvas>
+
+    <ul id="habitList"></ul>
+</div>
+
+<audio id="ding" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
